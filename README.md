@@ -1,6 +1,6 @@
 # Volatility Automation
 
-## This script will automate the running and processing of linux memory images in order to reduce the knowledge and time required to figure out and build the symbols table.
+## This script will automate the running and processing of linux memory images in order to reduce the knowledge and time required to figure out and build the symbols file.
 
 ### How to use
 To run this script, it requires 3 parameters, `--profile/-p`, `--image/-i`, `--vol/-v`
