@@ -41,13 +41,9 @@ class VolatilityAutomation:
                 if kernel_ver in url[0]:
                     profile = url[0]
 
-            # Download correct symbols
-            correct_profile = requests.get(profile).text
+            # Download correct symbols to the correct path
+            sp.getoutput(f"wget -P {self.vol}/volatility3/framework/symbols/linux/ {profile}")
 
-            
-            # Write symbols to correct location
-            with open(f"{self.vol}/volatility3/symbols/{profile.split('/')[-1]}", "w") as new_profile:
-                new_profile.write(correct_profile)
             print(f"Added the correct profile to {self.vol}/volatility3/symbols/")
             return True
 
